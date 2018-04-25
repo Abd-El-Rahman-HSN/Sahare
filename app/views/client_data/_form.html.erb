@@ -1,0 +1,30 @@
+
+<H2>اضافة عميل</H2>
+
+        <%= simple_form_for client_datum, wrapper: :vertical_form do |form| %>
+          <% if client_datum.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(client_datum.errors.count, "error") %> prohibited this client_datum from being saved:</h2>
+
+              <ul>
+              <% client_datum.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= form.input :code, label: "كود العميل",class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.input :name,label: "الاسم" ,class: "form-control" %>
+          </div>
+        <br/>
+
+    <div class="col-xs-2" style="float: left;">
+      <%= form.submit "حفظ" , class: "btn btn-primary btn-lg btn-block"  %>
+    </div>
+
+   <% end %>

@@ -1,0 +1,17 @@
+    
+    <div class="navbar navbar-default navbar-static-top">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Sahare</a>
+        <div class="container">
+            <% if !user_signed_in? %>
+                  <%= render '/layouts/nav_gust' %>
+            <% else %>
+                  <%= render '/layouts/nav_user' %>
+            <% end %>
+      </div>
+    </div>

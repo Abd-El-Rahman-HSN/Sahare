@@ -1,0 +1,7 @@
+
+<div class="form-inputs">
+      <%= form.input :loccode, label: "كود الموقع" ,class: "form-control" %>
+      <%= form.input :project, label: "اسم الموقع" ,class: "form-control" %>
+      <%= form.input :siteeng, label: "مهندس الموقع" ,class: "form-control", collection: User.where(siteeng: true), value_method: :id, label_method: :full_name%>
+    </div>
+  

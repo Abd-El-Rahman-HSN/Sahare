@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @employee_datum.name %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @employee_datum.role %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @employee_datum.user %>
+</p>
+
+<p>
+  <strong>Pass:</strong>
+  <%= @employee_datum.pass %>
+</p>
+
+<%= link_to 'تعديل', edit_employee_datum_path(@employee_datum) %> |
+<%= link_to 'رجوع', employee_data_path %>

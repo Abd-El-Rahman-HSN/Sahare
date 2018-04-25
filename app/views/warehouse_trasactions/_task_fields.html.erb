@@ -1,0 +1,16 @@
+<<<<<<< HEAD
+
+
+<tr class='nested-fields' >
+      <td><%= f.input :item2,label: false , collection: ItemDate.all, value_method: :id, label_method: :itemname %></td>
+      <td><%= f.input :quantity2, label: false %></td>
+      <td><%= link_to_remove_association "remove task", f , class: "btn btn-success"%></td>
+=======
+<tbody>
+      <tr class='nested-fields' >
+<td><%= f.input :item, label: false  , collection: ItemDate.all, value_method: :itemname, label_method: :itemname %></td>
+<td><%= f.input :quantity, label: false %></td>
+<td><%= link_to_remove_association "remove task", f , class: "btn btn-primary"%></td>
+>>>>>>> d3b113a48718ea6e3ce83a18a6eca19552413de1
+</tr>
+</tbody>

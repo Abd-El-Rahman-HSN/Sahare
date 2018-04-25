@@ -1,0 +1,7 @@
+<tbody>
+            <tr class='nested-fields' >
+      <td><%= f.input :item, label: false  , collection: ItemDate.all, value_method: :itemname, label_method: :itemname %></td>
+      <td><%= f.input :quantity, label: false %></td>
+      <td><%= link_to_remove_association "remove task", f , class: "btn btn-primary"%></td>
+</tr>
+</tbody>

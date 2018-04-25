@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to(new_location_path, class: "btn btn-success" ,style: "float: left;") do %>
+اضافة موقع  <i class="icon-plus icon-white"></i>
+<% end %>
+
+<p>
+  <strong>كود المخزن</strong>
+  <%= @warehouse.warcode %>
+</p>
+
+<p>
+  <strong>اسم المخزن</strong>
+  <%= @warehouse.warname %>
+</p>
+<div class="form-actions">
+<%= link_to 'Edit', edit_warehouse_path(@warehouse), class: "btn btn-default btn-primary" %> |
+<%= link_to 'Back', warehouses_path, class: "btn btn-default btn-primary" %>
+</div>

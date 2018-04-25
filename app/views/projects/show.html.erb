@@ -1,0 +1,30 @@
+<%= link_to(new_location_path, class: "btn btn-success",style: "float: left;") do %>
+    اضافة الموقع <i class="icon-plus icon-white" ></i>
+        <% end %>
+
+        <%= link_to(new_warehouse_path, class: "btn btn-success",style: "float: left;") do %>
+    اضافة مخزن <i class="icon-plus icon-white" ></i>
+        <% end %>
+<p>
+  <strong>كود المشروع</strong>
+  <%= @project.projcode %>
+</p>
+
+<p>
+  <strong>العميل</strong>
+  <%= @project.client %>
+</p>
+
+<p>
+  <strong>وقت البداية</strong>
+  <%= @project.startdate %>
+</p>
+
+<p>
+  <strong>مدير المشروع</strong>
+  <%= @project.projmanager %>
+</p>
+
+
+<%= link_to 'تعديل', edit_project_path(@project) %> |
+<%= link_to 'رجوع', projects_path %>

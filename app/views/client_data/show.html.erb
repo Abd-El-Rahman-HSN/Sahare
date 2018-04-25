@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client_datum.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @client_datum.code %>
+</p>
+
+<%= link_to 'تعديل', edit_client_datum_path(@client_datum) %> |
+<%= link_to 'رجوع', client_data_path %>

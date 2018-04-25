@@ -1,0 +1,40 @@
+<%= simple_form_for @user, wrapper: :vertical_form do |f| %>
+  <%= f.error_notification message: 'راجع الأخطاء' %>
+  <% if current_user %>
+    <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %> prohibited
+        this user from being saved:
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="form-group">
+    <%= f.input :email, label: "الايميل" %>
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+    </div>
+
+    <div class="row">
+
+    </div>
+  </div>
+
+    
+  <div class="form-actions">
+    <%= f.submit "حفظ", class: "btn btn-default btn-primary" %> 
+    <%= link_to "رجوع", :back, class: "btn btn-default" %>
+  </div>
+  <% end %>
+<% end %>

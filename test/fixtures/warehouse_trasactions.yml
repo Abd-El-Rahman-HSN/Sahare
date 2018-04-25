@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item: MyString
+  quantity: MyString
+  warehouse_locations: one
+
+two:
+  item: MyString
+  quantity: MyString
+  warehouse_locations: two

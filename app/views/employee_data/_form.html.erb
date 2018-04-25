@@ -1,0 +1,34 @@
+<%= simple_form_for employee_datum, wrapper: :vertical_form do |form| %>
+  <% if employee_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee_datum.errors.count, "error") %> prohibited this employee_datum from being saved:</h2>
+
+      <ul>
+      <% employee_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.input :name,label: "الاسم",class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.input :role,label: "الوظيفة",class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.input :user, label: "المستخدم",class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.input :pass, label: "رقم المرور",class: "form-control"%>
+  </div>
+
+  <div class="col-xs-2" style="float: left;">
+      <%= form.submit "حفظ" , class: "btn btn-primary btn-lg btn-block"  %>
+  </div>
+
+<% end %>

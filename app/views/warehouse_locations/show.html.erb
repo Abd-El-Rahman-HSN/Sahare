@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<<<<<<< HEAD
+<%= link_to(new_warehouse_trasaction_path, class: "btn btn-success" ,style: "float: left;") do %>
+اضافه حركة الاصناف  <i class="icon-plus icon-white"></i>
+<% end %>
+=======
+
+<button type="button" class="btn btn-success" data-toggle="modal" style="float: left;" data-target=".bs-example-modal-lg">اضافة حركة اصناف</button>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h1 class="modal-title" id="exampleModalLabel">اضافة الاصناف</h1>
+          </div>
+          <div class="modal-body">
+            <form>
+              <%= simple_form_for(@warehouse_trasactions) do |f| %>
+              <div id='tasks'>
+                    <table class="table" >
+                        <thead>
+                          <tr>
+                            <th><h3 style="float: right;" >الصنف</h3></th>
+                            <th><h3 style="float: right;">الكمية</h3></th>
+                            <th colspan="3"></th>
+                          </tr>
+                        </thead>
+                          <%= render 'warehouse_trasactions/task_fields', :f => task %>
+                        </table>
+                  <div class='links'>
+                    <%= link_to_add_association 'add task', f, :warehouse_trasaction ,class: "btn btn-success" %>
+                  </div>
+                </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit 'Save', class: "btn btn-primary" %>
+          </div>
+          <% end %>
+    </div>
+  </div>
+</div>
+>>>>>>> d3b113a48718ea6e3ce83a18a6eca19552413de1
+
+<h2>
+  <strong>كود المخزن:</strong>
+  <%= @warehouse_location.warloccode %>
+</h2>
+
+<h2>
+  <strong>اسم المخزن:</strong>
+  <%= @warehouse_location.warlocname %>
+</h2>
+
+<%= link_to 'تعديل', edit_warehouse_location_path(@warehouse_location) ,class: "btn btn-primary"%> |
+<%= link_to 'رجوع', warehouse_locations_path ,class: "btn btn-primary" %>

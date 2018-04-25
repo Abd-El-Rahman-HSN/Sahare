@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>حركة الاصناف</h1>
+
+<%= link_to(new_warehouse_trasaction_path, class: "btn btn-success" ,style: "float: left;") do %>
+اضافة حركة اضناف  <i class="icon-plus icon-white"></i>
+<% end %>
+<br><br><br>
+<table class="table table-striped table-bordered table-condensed">
+  <thead>
+    <tr>
+<<<<<<< HEAD
+      <th>الصنف</th>
+      <th>الكمية</th>
+      
+=======
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Warehouse locations</th>
+      <th colspan="3"></th>
+>>>>>>> d3b113a48718ea6e3ce83a18a6eca19552413de1
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |ta| %>
+      <tr>
+<<<<<<< HEAD
+          <td><%= ta.item2 %></td>
+          <td><%= ta.quantity2 %></td>
+=======
+        <td><%= warehouse_trasaction.item %></td>
+        <td><%= warehouse_trasaction.quantity %></td>
+        <td><%= warehouse_trasaction.warehouse_locations %></td>
+        <td><%= link_to 'Show', warehouse_trasaction %></td>
+        <td><%= link_to 'Edit', edit_warehouse_trasaction_path(warehouse_trasaction) %></td>
+        <td><%= link_to 'Destroy', warehouse_trasaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+>>>>>>> d3b113a48718ea6e3ce83a18a6eca19552413de1
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

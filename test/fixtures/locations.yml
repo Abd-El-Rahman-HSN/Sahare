@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  loccode: MyString
+  project: MyString
+  siteeng: MyString
+  Project: one
+
+two:
+  loccode: MyString
+  project: MyString
+  siteeng: MyString
+  Project: two

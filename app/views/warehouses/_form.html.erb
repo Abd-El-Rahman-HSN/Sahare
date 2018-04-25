@@ -1,0 +1,13 @@
+
+<%= simple_form_for(@warehouse) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :warcode, label: "كود المخزن" ,class: "form-control" %>
+    <%= f.input :warname, label: "اسم المخزن" ,class: "form-control" %>
+  </div>
+
+  <div class="col-xs-2" style="float: left;">
+      <%= f.submit "حفظ" , class: "btn btn-primary btn-lg btn-block"  %>
+  </div>
+<% end %>

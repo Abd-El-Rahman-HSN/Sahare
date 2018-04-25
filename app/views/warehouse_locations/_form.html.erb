@@ -1,0 +1,26 @@
+
+<%= simple_form_for(@warehouse_location) do |f| %>
+<% if @warehouse_location.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@warehouse_location.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+  <ul>
+  <% @warehouse_location.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :warloccode, label: "كود المخزن" ,class: "form-control" %>
+    <%= f.input :warlocname, label: "اسم المخزن" ,class: "form-control" %>
+  </div>
+
+  <div class="col-xs-2" style="float: left;">
+      <%= f.submit "حفظ" , class: "btn btn-primary btn-lg btn-block"  %>
+  </div>
+<% end %>
+
+

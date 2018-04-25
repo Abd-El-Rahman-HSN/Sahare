@@ -1,0 +1,38 @@
+<%= simple_form_for project, wrapper: :vertical_form do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.input :projcode, label: "كود المشروع" %>
+  </div>
+
+  <div class="field">
+    <%= form.input :projname, label: "اسم المشروع" %>
+  </div>
+
+  <div class="field">
+    <%= form.input :client, label: "العميل" , collection: ClientDatum.all, value_method: :id, label_method: :name %>
+  </div>
+
+  <div class="field">
+    <%= form.input :startdate, label: "وقت البداية" %>
+  </div>
+
+  <div class="field">
+    <%= form.input :projmanager, label: "مدير المشروع", collection: User.where(projectmange: true), value_method: :id, label_method: :full_name %>
+  </div>
+
+
+  <div class="col-xs-2" style="float: left;">
+      <%= form.submit "حفظ" , class: "btn btn-primary btn-lg btn-block"  %>
+    </div>
+<% end %>

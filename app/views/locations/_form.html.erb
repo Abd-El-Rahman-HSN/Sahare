@@ -1,0 +1,13 @@
+<%= simple_form_for(@location) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :loccode, label: "كود الموقع" ,class: "form-control" %>
+    <%= f.input :project, label: "اسم الموقع" ,class: "form-control" %>
+    <%= f.input :siteeng, label: "مهندس الموقع" ,class: "form-control", collection: User.where(siteeng: true), value_method: :id, label_method: :full_name%>
+  </div>
+
+  <div class="col-xs-2" style="float: left;">
+      <%= f.submit "حفظ" , class: "btn btn-primary btn-lg btn-block"  %>
+    </div>
+<% end %>

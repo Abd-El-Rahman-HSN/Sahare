@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @warehouse_trasaction.item %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @warehouse_trasaction.quantity %>
+</p>
+
+<p>
+<<<<<<< HEAD
+  <strong>Warehouse location:</strong>
+  <%= @warehouse_trasaction.warehouse_location_id %>
+=======
+  <strong>Warehouse locations:</strong>
+  <%= @warehouse_trasaction.warehouse_locations %>
+>>>>>>> d3b113a48718ea6e3ce83a18a6eca19552413de1
+</p>
+
+<%= link_to 'Edit', edit_warehouse_trasaction_path(@warehouse_trasaction) %> |
+<%= link_to 'Back', warehouse_trasactions_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>كود الصنف</strong>
+  <%= @item_date.itemcode %>
+</p>
+
+<p>
+  <strong>اسم الصنف</strong>
+  <%= @item_date.itemname %>
+</p>
+
+<p>
+    <strong>المجموعة</strong>
+    <%= @item_date.category %>
+</p>
+
+<p>
+  <strong>الوصف</strong>
+  <%= @item_date.description %>
+</p>
+
+<%= link_to 'تعديل', edit_item_date_path(@item_date) %> |
+<%= link_to 'رجوع', item_dates_path %>

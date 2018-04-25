@@ -1,0 +1,36 @@
+<H2>بيانات الاصناف</H2>
+      <%= simple_form_for item_date, wrapper: :vertical_form do |form| %>
+        <% if item_date.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(item_date.errors.count, "error") %> prohibited this item_date from being saved:</h2>
+
+            <ul>
+              <% item_date.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+      <div class="field">
+        <%= form.input :itemcode ,label: "كود الصنف" ,class: "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.input :itemname ,label: "اسم الصنف",class: "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.input :category ,label: "المجموعة" ,class: "form-control", collection: Category.all, label_method: :categorys %>
+      </div>
+
+      <div class="field">
+        <%= form.input :description ,label: "الوصف" ,class: "form-control" %>
+      </div>
+      
+    <br/>
+    <div class="col-xs-2" style="float: left;">
+        <%= form.submit "حفظ" , class: "btn btn-primary btn-lg btn-block"  %>
+      </div>
+<% end %>
+
